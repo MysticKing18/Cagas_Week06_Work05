@@ -37,6 +37,7 @@
             this.txtdescription = new System.Windows.Forms.TextBox();
             this.lblamount = new System.Windows.Forms.Label();
             this.lbldescription = new System.Windows.Forms.Label();
+            this.lblprompt = new System.Windows.Forms.Label();
             this.grpboxItemDes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -87,6 +89,7 @@
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // comboBoxAmount
             // 
@@ -128,10 +131,23 @@
             this.lbldescription.TabIndex = 0;
             this.lbldescription.Text = "Description";
             // 
+            // lblprompt
+            // 
+            this.lblprompt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblprompt.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprompt.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblprompt.Location = new System.Drawing.Point(3, 311);
+            this.lblprompt.Name = "lblprompt";
+            this.lblprompt.Size = new System.Drawing.Size(634, 36);
+            this.lblprompt.TabIndex = 2;
+            this.lblprompt.Text = "PROMPT";
+            this.lblprompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ucProductListing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblprompt);
             this.Controls.Add(this.grpboxItemDes);
             this.Name = "ucProductListing";
             this.Size = new System.Drawing.Size(663, 371);
@@ -153,5 +169,6 @@
         private System.Windows.Forms.ComboBox comboBoxAmount;
         private System.Windows.Forms.TextBox txtamount;
         private System.Windows.Forms.TextBox txtdescription;
+        private System.Windows.Forms.Label lblprompt;
     }
 }
